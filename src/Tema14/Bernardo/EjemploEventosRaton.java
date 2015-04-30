@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Tema14;
+package Tema14.Bernardo;
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;

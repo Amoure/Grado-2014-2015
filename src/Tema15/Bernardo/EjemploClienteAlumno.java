@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Tema15;
+package Tema15.Bernardo;
 import java.net.*;
 import java.io.*;
 

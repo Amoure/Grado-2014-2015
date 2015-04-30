@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Tema13;
+package Tema13.Bernardo;
 
 import java.awt.*;
 
