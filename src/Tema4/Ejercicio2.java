@@ -27,19 +27,19 @@ public class Ejercicio2 {
             for(int i=1;i<=cantidad;i++){
                 numero=br.readLine();
                 if(e.esNegativo(numero)){
-                    totalNegativos=+Integer.parseInt(numero);
-                    total=+Integer.parseInt(numero);
+                    totalNegativos+=Integer.parseInt(numero);
+                    total+=Integer.parseInt(numero);
                 }
                 else{
-                    totalPositivos=+Integer.parseInt(numero);
-                    total=+Integer.parseInt(numero);
+                    totalPositivos+=Integer.parseInt(numero);
+                    total+=Integer.parseInt(numero);
                 }    
             }
             System.out.println(total);
             System.out.println(totalPositivos);
             System.out.println(totalNegativos);
         }catch(NumberFormatException ne){
-            System.out.println("Debes introducir un numero");
+            System.out.println("Debes introducir un numero");           
         }
     }
     
