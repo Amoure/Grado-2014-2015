@@ -1,0 +1,752 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0097)http://larioja.adrformacion.com/general/prt/prg/leccgen/todo.php?codcurso=JAVASER&unidad=1&varp=6 -->
+<HTML><HEAD><TITLE>Formularios © ADR Infor SL</TITLE>
+<META http-equiv=Content-Language content=es>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="Formularios_archivos/plantilla.css" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY topMargin=10 marginheight="10" marginwidth="10"><A name=indice></A>
+<TABLE width=600 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <H1>Indice de la Unidad</H1>&nbsp;&nbsp;&nbsp;&nbsp; <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_0');">1 
+      - Formularios HTML<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_1');">Formularios 
+      HTML<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_2');">Etiqueta 
+      form<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_3');">Estudio 
+      de 
+      componentes<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_4');">Cuadros 
+      de 
+      texto<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_5');">CTs 
+      con 
+      contraseña<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_6');">CTs 
+      ocultos<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_7');">Áreas 
+      de 
+      texto<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_8');">Botón 
+      de 
+      envío<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_9');">Botón 
+      de 
+      reset<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_10');">Casillas 
+      de 
+      verificación<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_11');">Botones 
+      de 
+      opción<BR></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#1_12');">Listas<BR></A></TD></TR></TBODY></TABLE><BR>
+<P><A name=1_0>
+<H1>1 - Formularios HTML</H1></A>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_1>
+<H2>Formularios HTML</H2></A>
+<P>Un formulario permite<BR></P>
+<UL>
+  <LI><B>Crear, en un cliente web, componentes gráficos</B> como cuadros de 
+  texto, listas desplegables, listas desplazables, áreas de texto, botones, 
+  etc.</LI></UL>
+<UL>
+  <LI><B>Enviar información</B> a programas que se almacenan y ejecutan en un 
+  servidor web para:</LI></UL>
+<BLOCKQUOTE>
+  <UL>
+    <LI>Obtener información del usuario </LI></UL>
+  <UL>
+    <LI>Generar una respuesta, habitualmente HTML, en base a los datos obtenidos 
+    del formulario. </LI></UL></BLOCKQUOTE>
+<P><B>En Java</B>, estos programas, típicamente son los <B>servlets y las 
+páginas JSP</B>. Otros programas similares no basados en Java son: programas 
+CGI, páginas ASP, páginas PHP, páginas Javascript, etc. De aquí en adelante, se 
+supondrá que el programa hospedado en el servidor es un servlet, aunque todo lo 
+dicho valdrá para cualquiera de los enumerados previamente.</P>
+<P>Cada componente gráfico está asociado a una serie de etiquetas o tags html y 
+sus correspondientes atributos. Su contenido varía en función de las 
+características deseadas para cada componente.</P>
+<P><B>La información</B> introducida en un formulario <B>se envía en forma de 
+pares name/value, </B>tras pulsar un botón de envío que forma parte del propio 
+formulario. El contenido de cada par name/value está<B> </B>muy relacionado con 
+los atributos de las etiquetas de los componentes (se explicarán con más detalle 
+a medida que se avance en la lección).</P>
+<P>Las <B>etiquetas necesarias para</B> <B>definir un formulario</B> en un 
+código html son <B>&lt;form&gt; y </B>su cierre<B> &lt;/form&gt;</B>. Todas las 
+etiquetas de sus componentes deben estar encerradas entre este par de 
+etiquetas.</P>
+<P><A 
+href="http://larioja.adrformacion.com/general/prt/c/javaser/1/Formulario1.html" 
+target=_blank>Ver ejemplo</A></P>
+<P>En las siguientes secciones del tema se van a estudiar los atributos 
+principales de esta etiqueta, y las etiquetas y atributos más frecuentes de los 
+componentes más utilizados en un formulario típico.</P>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_2>
+<H2>Etiqueta form</H2></A>
+<P><IMG height=149 alt="" src="Formularios_archivos/img010000.gif" width=468 
+border=0></P>
+<P><B>Atributos habituales: action, method y enctype</B></P>
+<UL>
+  <LI><B>action (obligatorio)</B>: especifica el <B>url del programa hospedado 
+  en el servidor</B>. En nuestro caso, un servlet, que será el encargado de 
+  capturar y procesar los datos enviados desde el formulario, y de generar, 
+  habitualmente, una respuesta html que suele varíar en función de los datos 
+  enviados.</LI></UL>
+<BLOCKQUOTE>
+  <TABLE id=AutoNumber52 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+  cellSpacing=0 cellPadding=2 width="90%" bgColor=#d7e4ec border=1>
+    <TBODY>
+    <TR>
+      <TD>
+        <P><B>NOTA:</B> recordar que, aunque es lo más habitual, un url no tiene 
+        por qué asociarse con un servidor web que admite peticiones de clientes 
+        del tipo <A href="http://host:puerto/ruta_recurso" 
+        target=_blank>http://host:puerto/ruta_recurso</A> </P>
+        <P>Puede ser también un servidor de correo cuyo tipo de peticiones 
+        admitidas es <A 
+        href="mailto:trilcejf@trilcejf.com">mailto:trilcejf@trilcejf.com</A><B> 
+        </B>&nbsp;o la de un servidor de ficheros con peticiones del tipo <A 
+        href="ftp://ftp.mycgiserver.com/" 
+        target=_blank>ftp://ftp.mycgiserver.com/</A>. Lo habitual es que sea un 
+        url asociado un servidor web, pero no es obligatorio que sea 
+    así.</P></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<UL>
+  <LI><B>method</B>: indica el <B>tipo de petición</B> realizada desde el 
+  cliente. Fundamentalmente dos tipos: <B>GET y POST</B>. Se explican más 
+  adelante en este apartado.</LI></UL>
+<BLOCKQUOTE>
+  <P>Es un <B>indicador del modo en que se envía información al servidor y de 
+  cómo se refleja ese envío en el cliente</B>. </P>
+  <P>Independientemente del valor que tenga este atributo, el cliente, aparte de 
+  los datos del formulario, envía más información al servlet a la escucha en el 
+  servidor. Se estructura del siguiente modo:</P>
+  <UL>
+    <LI><B>Línea principal de encabezamiento de petición</B>: se compone de tres 
+    secciones: </LI></UL>
+  <BLOCKQUOTE>
+    <P><IMG height=155 alt="" src="Formularios_archivos/img010001.gif" width=528 
+    border=0></P></BLOCKQUOTE>
+  <UL>
+    <LI><B>Encabezados de petición</B> (se estudiarán más adelante). </LI></UL>
+  <UL>
+    <LI><B>Cuerpo de petición</B> </LI></UL>
+  <P><B>Ejemplo:</B></P>
+  <P><I>----- (Línea principal de encabezamiento de petición) -----</I></P>
+  <P>GET//ServletPrueba.class//1.1</P>
+  <P><I>----- (Encabezados de petición) -----</I></P>
+  <P><B>Host:</B> <I>localhost:8080</I></P>
+  <P><B>Cookie</B>: JSESSION=A12D3E3AB</P>
+  <P><B>User-Agent:</B> <I>Mozilla/5.0 (Windows; U; Windows NT 5.1; rv:1.7.3) 
+  Gecko/20041001 Firefox/0.10.1</I> </P>
+  <P style="TEXT-ALIGN: left"><B>A<FONT size=2>ccept</FONT></B><FONT 
+  size=2>:<I>text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5</I> 
+  </FONT></P>
+  <P><B>Accept-Language:</B> <I>en-us,en;q=0.5</I> </P>
+  <P><B>Accept-Encoding:</B> <I>gzip,deflate</I> </P>
+  <P><B>Accept-Charset:</B> <I>ISO-8859-1,utf-8;q=0.7,*;q=0.7</I> </P>
+  <P><B>Keep-Alive:</B> <I>300</I> </P>
+  <P><B>Connection:</B> <I>keep-alive</I> </P>
+  <P><B>Referer:</B> <I><A 
+  href="http://localhost:8080/servlets-examples/Formulario1Informacion.html">http://localhost:8080/servlets-examples/Formulario1Informacion.html</A></I> 
+  </P>
+  <P><B>Content-Type:</B> <I>application/x-www-form-urlencoded</I> </P>
+  <P><B>Content-Length:</B> <I>38</I></P>
+  <P><I>----- (Cuerpo de la petición) -----</I></P>
+  <P>Los datos rellenados en el formulario en forma de pares name/value</P>
+  <P>&nbsp;</P>
+  <P>Los dos valores de method más frecuentemente utilizados son:</P>
+  <UL>
+    <LI><B>GET</B>: implica que <B>la petición no tiene cuerpo</B> y que los 
+    <B>datos enviados</B> en forma de pares name/value <B>se adjuntan en la 
+    barra de direcciones del cliente, al final del url correspondiente y después 
+    de un signo de interrogación de cierre (?)</B>&nbsp; </LI></UL>
+  <BLOCKQUOTE>
+    <P>Cuando el cliente envía varios datos asociados a diferentes componentes 
+    del formulario, se muestran separados por el símbolo del ampersand 
+    (&amp;).</P>
+    <P>Es el <B>modo de envío por defecto</B> y, por tanto, el empleado si no se 
+    especifica atributo method en la etiqueta &lt;form&gt;</P>
+    <P><B>Ejemplo:</B></P>
+    <P><A 
+    href="http://.........../?nombre1=valor1&amp;nombre2=valor2">http://.........../?nombre1=valor1&amp;nombre2=valor2</A></P>
+    <TABLE id=AutoNumber53 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+    cellSpacing=0 cellPadding=2 width="85%" bgColor=#d7e4ec border=1>
+      <TBODY>
+      <TR>
+        <TD>
+          <P><B>NOTA:</B> si sólo se envía información asociada a cuadros de 
+          texto, no es necesario crear los componentes en el formulario, basta 
+          con introducirlos al final del url. Ocurre que la mayoría de clientes 
+          tiene limitado el número de caracteres que pueden escribirse en la 
+          barra de direcciones. No obstante, cuando se envía poca información o 
+          para depurar, puede ser útil.</P></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+  <UL>
+    <LI><B>POST</B>: los <B>datos enviados no se adjuntan en la barra de 
+    direcciones del cliente sino formando parte del cuerpo de la petición</B> 
+    </LI></UL>
+  <P><B>Ventajas e inconvenientes de GET frente a POST:</B></P>
+  <P>GET suele emplearse para depurar o probar el servlet. Como se verá en el 
+  ejemplo, no es necesario crear un formulario si se envía información no muy 
+  extensa, puesto que se puede ubicar al final del url en la barra de 
+  direcciones del cliente. </P>
+  <P>Cuando esa información supera los 255 caracteres, conviene utilizar POST. 
+  No es una limitación del protocolo HTTP, sino de algunos clientes y/o 
+  servidores que no permiten gestionar cadenas de texto de ese número de 
+  caracteres.</P>
+  <P><B>Ejemplo:</B></P>
+  <P><A href="http://www.mycgiserver.com/~trilcejf/FormuGet.htm" 
+  target=_blank>http://www.mycgiserver.com/~trilcejf/FormuGet.htm</A> </P>
+  <P>Este url invoca a un formulario con las siguientes características:</P>
+  <UL>
+    <LI>action=un servlet hospedado en el servidor de <A 
+    href="http://www.mycgiserver.com/" 
+    target=_blank>http://www.mycgiserver.com/</A> de nombre trilcejf.ServletGet 
+    </LI></UL>
+  <UL>
+    <LI>method=get </LI></UL>
+  <P>Después de rellenar la información solicitada se pulsa Enviar y se 
+  observará en la barra de direcciones del cliente:</P>
+  <P><A 
+  href="http://www.mycgiserver.com/servlet/trilcejf.ServletGet?nombre=Jesus&amp;telefono=12345" 
+  target=_blank>http://www.mycgiserver.com/servlet/trilcejf.ServletGet?nombre=Jesus&amp;telefono=12345</A> 
+  </P>
+  <P>La información enviada puede verla cualquiera que esté cerca de tu máquina. 
+  Cuando los datos no sean importantes, no importará, pero si lo son, no 
+  conviene que aparezcan en la barra de direcciones del cliente. Además, el url 
+  con los pares name/value quedará registrado en el historial.</P>
+  <TABLE id=AutoNumber54 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+  cellSpacing=0 cellPadding=2 width="85%" bgColor=#d7e4ec border=1>
+    <TBODY>
+    <TR>
+      <TD><B>NOTA:</B> se podría invocar al servlet, pasándole la información 
+        de nombre y teléfono, tecleando en la barra de direcciones del cliente 
+        <P><A 
+        href="http://www.mycgiserver.com/servlet/trilcejf.ServletGet?nombre=Jesus&amp;telefono=12345" 
+        target=_blank>http://www.mycgiserver.com/servlet/trilcejf.ServletGet?nombre=Jesus&amp;telefono=12345</A> 
+        </P>
+        <P>No es necesario el formulario</P>
+        <P><B>Problema</B>: muchos clientes limitan el número de caracteres 
+        (máximo de 255) que pueden escribirse en su barra de direcciones. Cuando 
+        se necesite enviar más información de la que admite la barra de 
+        direcciones, se usará post.</P></TD></TR></TBODY></TABLE>
+  <P>Si se quiere enviar información que no supera el número máximo de 255 
+  caracteres, qué es preferible: ¿GET o POST?</P>
+  <P>Si la información es confidencial o sensible, conviene emplear POST; si no, 
+  daría lo mismo.</P>
+  <P>Habitualmente se emplea POST.</P>
+  <P><A href="http://www.mycgiserver.com/~trilcejf/FormuPost.htm" 
+  target=_blank>http://www.mycgiserver.com/~trilcejf/FormuPost.htm</A></P></BLOCKQUOTE>
+<UL>
+  <LI><B>enctype</B>: <B>establece el tipo MIME</B> (Multipurpose Internet Mail 
+  Extension o Extensión para el envío de contenido múltiple a través de 
+  Internet) <B>y el código de caracteres empleado para la transferencia de 
+  información entre un cliente y un servidor.</B></LI></UL>
+<BLOCKQUOTE>
+  <P>El tipo MIME <B>especifica el tipo de dato (texto plano, texto html, 
+  imagen, sonido, etc,) que contiene la información que se transfieren un 
+  cliente y un servidor</B>. Adjunta a la información un encabezado donde se 
+  indica el tipo y el subtipo de su contenido. Gracias a esta información, tanto 
+  el servidor como el navegador pueden manejar y presentar los ficheros 
+  correctamente. <B>Además, especifica la herramienta software que se necesita 
+  para acceder a dicha información.</B></P>
+  <P>Los navegadores tienen configurados, por defecto, una serie de tipos MIME, 
+  de modo que saben cómo interpretar y ejecutar la información definida mediante 
+  estos tipos</P>
+  <P>Los servidores tienen que tener también configurados los tipos MIME 
+  adecuados, ya que si no, serían incapaces de interpretar el tipo de datos que 
+  un cliente le solicita y no podrían enviarlos adecuadamente. Generalmente, los 
+  servidores definen los tipos MIME que soportan en algún fichero de 
+  configuración interna. En el caso de Tomcat, en tomcat_home\conf\web.xml. No 
+  tiene sentido ubicar un recurso en un servidor si no soporta su tipo MIME 
+  correspondiente ya que no será capaz de interpretar las peticiones </P>
+  <P>Así, cuando un cliente invoca a un servlet está realizando una petición de 
+  un programa Java a un servidor. El MIME asociado a una aplicación Java es 
+  "application-java". Si este MIME es soportado por el servidor, no habrá 
+  problemas en resolver la petición</P></BLOCKQUOTE>
+<BLOCKQUOTE>
+  <TABLE id=AutoNumber55 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+  cellSpacing=0 cellPadding=2 width="90%" bgColor=#d7e4ec border=1>
+    <TBODY>
+    <TR>
+      <TD><B>NOTA</B>: no siempre ocurre lo anterior. 
+        <P>Si un cliente realiza una petición a un fichero jnlp (representa una 
+        aplicación Java Web Start), el servidor será capaz de procesar la 
+        petición y enviárselo al cliente si soporta el MIME 
+        (application/x-java-jnlp-file)</P>
+        <P>Además, el MIME le indicará al cliente, el programa en que debe 
+        delegar el procesamiento del fichero jnlp. En este caso, Java Web Start. 
+        </P>
+        <P>Si está instalado, OK; si no, la petición no podrá satisfacerse y se 
+        mostrará un mensaje de error.</P></TD></TR></TBODY></TABLE>
+  <P>Cuando se trabaja con formularios, el MIME es 
+  "application/x-www-form-urlencoded" (se incluye por defecto, así que no es 
+  necesario escribirlo). Esto significa que la información enviada desde un 
+  formulario a un programa hospedado en un servidor se "envuelven" del siguiente 
+  modo: </P>
+  <P>Los espacios en blanco se convierten en signos + y los caracteres no 
+  alfanuméricos en enteros hexadecimales precedidos del símbolo del tanto por 
+  ciento. Todos los servidores web soportan este tipo MIME. </P>
+  <P>La respuesta generada suele ser html. Su MIME es "text/html". Cuando el 
+  servidor envía la respuesta al cliente, éste, en base al tipo MIME en que se 
+  ha envuelto, conoce el programa adecuado para interpretarla. En este caso, el 
+  propio cliente.</P>
+  <P><B>Ejemplos de tipos MIME</B>: la estructura de los tipos registrados es 
+  "tipo base/subtipo"; la de los no registrados "tipo base/x-subtipo":</P>
+  <BLOCKQUOTE>
+    <P>text/plain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Envío de información&nbsp; mediante texto plano</P>
+    <P>text/html&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Envío de información mediante código HTML</P>
+    <P>image/gif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Envío de información mediante el formato .gif para imágenes</P>
+    <P>image/jpeg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Ídem mediante el formato .jpeg para imágenes</P>
+    <P>application/x-www-form-urlencoded&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Envío de información mediante formularios HTML</P>
+    <P>application/x-java-archive&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Ídem mediante ficheros .jar</P>
+    <P>application/msword&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Ídem mediante un documento de Word</P>
+    <P>application/vnd.ms-excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Ídem mediante un libro de trabajo de Excel</P>
+    <P>application/pdf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Ídem mediante un documento de Acrobat</P>
+    <P>application/zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Ídem mediante un fichero comprimido .zip</P>
+    <P>application/octet-stream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Ídem mediante un fichero binario o no reconocido</P>
+    <TABLE id=AutoNumber57 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+    cellSpacing=0 cellPadding=2 width="85%" bgColor=#d7e4ec border=1>
+      <TBODY>
+      <TR>
+        <TD><B>NOTA 1</B>: el tipo MIME y el código de caracteres por defecto, 
+          de la información generada por un servlet para definir la respuesta, 
+          es text/html y ISO-8859-1 respectivamente.</TD></TR></TBODY></TABLE>
+    <P>&nbsp;</P>
+    <TABLE id=AutoNumber56 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+    cellSpacing=0 cellPadding=2 width="85%" bgColor=#d7e4ec border=1>
+      <TBODY>
+      <TR>
+        <TD><B>NOTA 2:</B> no confundir el tipo MIME con el código de 
+          caracteres empleado para envían información textual. No es lo mismo 
+          escribir el contenido de un formulario en Japón o en paises árabes que 
+          en Europa puesto que se utilizan diferentes caracteres. 
+          <P>El usado en los paises occidentales y con el que se generan, a 
+          menos que se especifique otro, las respuestas en los servlets es 
+          ISO-8859-1</P></TD></TR></TBODY></TABLE></BLOCKQUOTE>
+  <P><B>Ejemplos de formularios:</B></P>
+  <P><A href="http://www.planetalia.com/empresas/informacion.jsp" 
+  target=_blank>http://www.planetalia.com/empresas/informacion.jsp</A> </P>
+  <P>Ir a Menú Ver/Código fuente y realizar una búsqueda mediante usando 
+  &lt;form</P>
+  <P><I>&lt;form method=post action="SolicitarInformacion"&gt;</I></P>
+  <P><A href="http://www.mycgiserver.com/~trilcejf/EncuestaPrivada.html" 
+  target=_blank>http://www.mycgiserver.com/~trilcejf/EncuestaPrivada.html</A> 
+  </P></BLOCKQUOTE>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_3>
+<H2>Estudio de componentes</H2></A>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_4>
+<H3>Cuadros de texto</H3></A>
+<P><B>Se emplean para que el usuario introduzca información textual en una sola 
+línea</B>. Su etiqueta html está contenida entre la de apertura del formulario 
+&lt;form&gt; y la de cierre &lt;/form&gt;.</P>
+<P><IMG height=115 alt="" src="Formularios_archivos/img010002.gif" width=568 
+border=0></P>
+<P><B>Atributos habituales:</B></P>
+<UL>
+  <LI><B>type (obligatorio)</B>: su contenido es text. Indica el tipo de dato 
+  que admite un cuadro de texto. </LI></UL>
+<UL>
+  <LI><B>name (obligatorio):</B> su contenido, junto con el del atributo value, 
+  se envía al servlet. En un atributo fundamental que debe definirse en la 
+  mayoría de controles de formulario ya que es utilizado por el servlet 
+  (mediante métodos de la API correspondiente), para obtener el correspondiente 
+  value.</LI></UL>
+<BLOCKQUOTE>
+  <P><B>Ejemplo 1:</B></P>
+  <P>El método <B>String getParameter(String name)</B> devuelve una String que 
+  almacena el value asociado al name que se le pasa al argumento. Similar al 
+  empleado en applets.</P>
+  <P><B>Ejemplo 2:</B></P>
+  <P>El método <B>Enumeration getParameterNames()</B> devuelve una Enumeration 
+  que contiene todos los names asociados a los diversos componentes del 
+  formulario de envío del cliente. Esta Enumeration se recorre mediante los 
+  métodos conocidos <B>boolean hasMoreElements() y Object nextElement().</B></P>
+  <P>Suele emplearse cuando se desconocen los nombres de los names de la 
+  petición o son muchos y se necesitan capturar todos.</P>
+  <P>Hay muchos más: se estudiarán con detenimiento en el siguiente 
+tema.</P></BLOCKQUOTE>
+<UL>
+  <LI><B>value</B>: es opcional<B> </B>y <B>sirve para establecer un contenido 
+  inicial en el cuadro de texto</B>. Si no se quiere ninguno, no será necesario 
+  definirlo. </LI></UL>
+<BLOCKQUOTE>
+  <P>Cuando un formulario que incluye un cuadro de texto es enviado al servidor, 
+  el servlet que se encarga de procesarlo recibe un dato en forma de par 
+  name/value.</P>
+  <P>El name es el especificado en la etiqueta del cuadro; el value es el texto 
+  escrito en el cuadro.</P>
+  <P>En peticiones de tipo get este par name/value se muestra en la barra de 
+  direcciones del cliente, al final del url del servlet y después de un 
+  interrogante de cierre (?).</P>
+  <P><B>Ejemplo</B>:</P>
+  <P><A 
+  href="http://.........../?nombre1=valor1">http://.........../?nombre1=valor1</A> 
+  </P>
+  <P>Si el formulario cuenta con dos cuadros de texto, <A 
+  href="http://.........../?nombre1=valor1&amp;nombre2=valor2">http://.........../?nombre1=valor1&amp;nombre2=valor2</A> 
+  </P>
+  <P>En peticiones de tipo post, los pares name/value no se muestra en la barra 
+  de direcciones.</P></BLOCKQUOTE>
+<UL>
+  <LI><B>size</B>: establece la anchura del cuadro de texto, en base, al número 
+  de caracteres máximo que se tiene previsto admitir. Si se escribe más que la 
+  anchura, el texto no se trunca.</LI></UL>
+<UL>
+  <LI><B>maxlength</B>: establece el número máximo de caracteres permitidos. La 
+  escritura se trunca si se sobrepasa el número establecido.</LI></UL>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_5>
+<H3>CTs con contraseña</H3></A>
+<P>Se emplean para que el usuario introduzca información textual en una sola 
+línea, codificada en base a un carácter de máscara. Es muy habitual el 
+asterisco.</P>
+<P><B>Ejemplo:</B></P>
+<P><IMG height=43 alt="" src="Formularios_archivos/img010003.gif" width=277 
+border=0>&nbsp;</P>
+<P>Para que no aparezcan los datos en la barra de direcciones, una vez enviado 
+el formulario, el atributo method será de tipo post.</P>
+<P><IMG height=106 alt="" src="Formularios_archivos/img010004.gif" width=575 
+border=0></P>
+<P><B>Atributos habituales:</B> los mismos que los de un cuadro de texto 
+normal.</P>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_6>
+<H3>CTs ocultos</H3></A>
+<P>Se emplean para que el diseñador del formulario envíe datos al servlet, sin 
+intervención del usuario.</P>
+<P><IMG height=114 alt="" src="Formularios_archivos/img010005.gif" width=569 
+border=0></P>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_7>
+<H3>Áreas de texto</H3></A>
+<P>Se utilizan para que el usuario introduzca información textual en varias 
+líneas.</P>
+<P><IMG height=206 alt="" src="Formularios_archivos/img010006.gif" width=447 
+border=0></P>
+<P>Los tres atributos especificados son obligatorios. No suelen ponerse más.</P>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_8>
+<H3>Botón de envío</H3></A>
+<P>Mediante su pulsación, se envian al servlet los datos del formulario.</P>
+<P><IMG height=47 alt="" src="Formularios_archivos/img010007.gif" width=452 
+border=0></P>
+<P><B>Atributos:</B></P>
+<UL>
+  <LI><B>type (obligatorio)</B>: su contenido es submit. Indica botón de envío 
+  de datos.</LI></UL>
+<UL>
+  <LI><B>name</B>: es opcional. Suele utilizarse cuando el diseñador del 
+  formulario define varios botones y desea que la respuesta del servlet sea 
+  distinta en función del botón pulsado. Cada uno tendrá distintos names 
+  asociados a distintos values.</LI></UL>
+<UL>
+  <LI><B>value</B>: es opcional. Si se define, establece el texto asociado al 
+  botón.&nbsp; Si no se define, el texto del botón será el contenido de type 
+  (submit).</LI></UL>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_9>
+<H3>Botón de reset</H3></A>
+<P>Mediante su pulsación, se restablecen los datos iniciales del formulario.</P>
+<P><IMG height=38 alt="" src="Formularios_archivos/img010008.gif" width=411 
+border=0></P>
+<P><B>Atributos:</B></P>
+<UL>
+  <LI><B>type (obligatorio)</B>: su contenido es reset. Indica botón de reseteo 
+  de datos.</LI></UL>
+<UL>
+  <LI><B>name</B>: ídem que para el botón de envío. No suele definirse.</LI></UL>
+<UL>
+  <LI><B>value</B>: ídem que para el botón de envío.</LI></UL>
+<P><B>EjemploComponentesTextuales</B>: realizar un formulario como el que se 
+muestra en el enlace <A 
+href="http://larioja.adrformacion.com/general/prt/c/javaser/1/Formulario1.html" 
+target=_blank>Ver formulario</A>. El código se puede copiar yendo a "Menú 
+Ver/Código fuente" desde el navegador.</P>
+<P><B>Código:</B></P>
+<P><IMG height=524 alt="" src="Formularios_archivos/img010010.gif" width=557 
+border=0></P>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_10>
+<H3>Casillas de verificación</H3></A>
+<P>Se utilizan para seleccionar o deseleccionar opciones. Cada opción es 
+independiente de las demás, es decir, si se selecciona una de ellas, el estado 
+de las otras no se modifica.</P>
+<P><B>Ejemplo:</B></P>
+<P><IMG height=212 alt="" src="Formularios_archivos/img010011.gif" width=557 
+border=0></P>
+<P>Cada casilla tiene su correspondiente etiqueta.</P>
+<P><B>Atributos habituales:</B></P>
+<UL>
+  <LI><B>type (obligatorio)</B>: su contenido es checkbox. Indica casilla de 
+  verificación.</LI></UL>
+<UL>
+  <LI><B>name (obligatorio):</B> su contenido es el identificador del atributo 
+  name.</LI></UL>
+<UL>
+  <LI><B>value</B>: es opcional. <B>Si no se define, es como si su contenido se 
+  estableciera a “on”</B>, en las etiquetas asociadas a las casillas 
+  seleccionadas. <B>El name para cada casilla debe ser diferente</B>. Ver 
+  EjemploCasillasVerificacion.</LI></UL>
+<BLOCKQUOTE>
+  <P><B>Si se define</B>, es habitual que el servlet capture los datos mediante 
+  el método <B>String[] getParameterValues(String name)</B>. <B>El name asociado 
+  a cada casilla debe ser el mismo</B>. El array de String que devuelve el 
+  método se compone de los diferentes values asociados a las casillas 
+  seleccionadas. Ver EjemploCasillasVerificacionBis.</P></BLOCKQUOTE>
+<UL>
+  <LI><B>checked</B>: establece una casilla activada por defecto. Basta con 
+  escribir el atributo sin especificar ningún valor.</LI></UL>
+<P><IMG height=270 alt="" src="Formularios_archivos/img010012.gif" width=551 
+border=0></P>
+<P><A 
+href="http://larioja.adrformacion.com/general/prt/c/javaser/1/CasillasVerificacion.html" 
+target=_blank>Ver formulario</A></P>
+<TABLE id=AutoNumber68 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+cellSpacing=0 cellPadding=2 width="100%" bgColor=#d7e4ec border=1>
+  <TBODY>
+  <TR>
+    <TD><B>NOTA:</B> al pulsar el botón Enviar, se transmiten al servlet los 
+      pares name/value de las etiquetas de las casillas seleccionadas, teniendo 
+      en cuenta que los name para cada casilla son diferentes y que sus 
+      correspondientes values serán "on". 
+      <P>En este caso, 
+  http://..........?actividad1=on&amp;actividad3=on</P></TD></TR></TBODY></TABLE>
+<P><IMG height=375 alt="" src="Formularios_archivos/img010013.gif" width=571 
+border=0></P>
+<P><A 
+href="http://larioja.adrformacion.com/general/prt/c/javaser/1/CasillasVerificacionBis.html" 
+target=_blank>Ver formulario</A></P>
+<TABLE id=AutoNumber67 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+cellSpacing=0 cellPadding=2 width="100%" bgColor=#d7e4ec border=1>
+  <TBODY>
+  <TR>
+    <TD><B>NOTA:</B> al pulsar el botón Enviar, se transmiten al servlet los 
+      pares name/value de las etiquetas de las casillas de verificación 
+      seleccionadas, teniendo en cuenta que, a diferencia del ejemplo anterior, 
+      ahora el name de todos las casillas es el mismo y el value no será "on" 
+      sino el definido explícitamente en cada etiqueta. 
+      <P>En este caso, 
+      http://..........?actividad=Parapente&amp;actividad=Submarinismo</P></TD></TR></TBODY></TABLE>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE><A name=1_11>
+<H3>Botones de opción</H3></A>
+<P>También llamados radio-buttons. Se utilizan para seleccionar o deseleccionar 
+opciones de idéntica forma que las casillas de verificación, pero presentan una 
+diferencia: cada opción no es independiente de las demás, es decir, si se 
+selecciona una de ellas, las otras se deseleccionan.</P>
+<P><B>Ejemplo:</B></P>
+<P><IMG height=279 alt="" src="Formularios_archivos/img010014.gif" width=542 
+border=0></P>
+<P>Cada botón tiene su correspondiente etiqueta.</P>
+<P><B>Atributos habituales:</B></P>
+<UL>
+  <LI><B>type (obligatorio)</B>: su contenido es radio. Indica botón de 
+  opción.</LI></UL>
+<UL>
+  <LI><B>name (obligatorio)</B>: su contenido es el identificador del atributo 
+  name. Debe ser el mismo en todas las etiquetas de los botones, que formen 
+  parte del mismo grupo.</LI></UL>
+<UL>
+  <LI><B>value</B>: es opcional, aunque lo habitual es que se defina; si no, su 
+  contenido se establece “on”. Esto provoca un problema de detección del botón 
+  seleccionado dado que los names son todos iguales.</LI></UL>
+<UL>
+  <LI><B>checked</B>: establece un botón de opción activado por defecto. Basta 
+  con escribir el atributo sin especificar ningún valor.</LI></UL>
+<P><IMG height=331 alt="" src="Formularios_archivos/img010015.gif" width=504 
+border=0></P>
+<P><A 
+href="http://larioja.adrformacion.com/general/prt/c/javaser/1/BotonesOpcion.html" 
+target=_blank>Ver formulario</A></P>
+<TABLE id=AutoNumber62 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+cellSpacing=0 cellPadding=2 width="100%" bgColor=#d7e4ec border=1>
+  <TBODY>
+  <TR>
+    <TD><B>NOTA:</B> al pulsar el botón Enviar, se transmite al servlet el par 
+      name/value del botón de opción seleccionado. 
+      <P>En este caso, 
+http://..........?actividad=Parapente</P></TD></TR></TBODY></TABLE>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE>&lt;<A name=1_12>
+<H3>Listas</H3></A>
+<P>Dos clases: desplazables y desplegables. Permiten seleccionar elementos de 
+una lista. La desplegable no admite selección múltiple, la desplazable sí.</P>
+<P><IMG height=181 alt="" src="Formularios_archivos/img010016.gif" width=411 
+border=0></P>
+<P>Se generan con las <B>etiquetas select y option</B>. El componente por 
+defecto es una lista desplegable. Para crear una lista desplazable debe 
+agregarse el atributo size o multiple, o ambos a la etiqueta select.</P>
+<P><IMG height=138 alt="" src="Formularios_archivos/img010017.gif" width=586 
+border=0></P>
+<P><B>Atributos habituales de select:</B></P>
+<UL>
+  <LI><B>name (obligatorio)</B>: su contenido es el identificador del name. Debe 
+  ser el mismo para todos los elementos de la lista.</LI></UL>
+<UL>
+  <LI><B>size</B>: establece el número de líneas visibles de la lista.</LI></UL>
+<UL>
+  <LI><B>multiple</B>: no precisa de ningún contenido y permite la selección 
+  múltiple.</LI></UL>
+<BLOCKQUOTE>
+  <TABLE id=AutoNumber65 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+  cellSpacing=0 cellPadding=2 width="90%" bgColor=#d7e4ec border=1>
+    <TBODY>
+    <TR>
+      <TD><B>NOTA:</B> si se utiliza uno cualquiera de estos dos atributos o 
+        los dos, la lista desplegable se convierte en lista 
+    desplazable</TD></TR></TBODY></TABLE></BLOCKQUOTE>
+<P><B>Atributos habituales de option:</B></P>
+<UL>
+  <LI><B>value</B>: es opcional. Si no se define, su contenido es el texto que 
+  aparece en la lista.</LI></UL>
+<UL>
+  <LI><B>selected</B>: no precisa de ningún contenido y permite mostrar un 
+  elemento de la lista seleccionado por defecto.</LI></UL>
+<P><IMG height=302 alt="" src="Formularios_archivos/img010018.gif" width=521 
+border=0></P>
+<P><A 
+href="http://larioja.adrformacion.com/general/prt/c/javaser/1/ListaDesplegable.html" 
+target=_blank>Ver formulario</A></P>
+<TABLE id=AutoNumber66 style="BORDER-COLLAPSE: collapse" borderColor=#4a5a64 
+cellSpacing=0 cellPadding=2 width="100%" bgColor=#d7e4ec border=1>
+  <TBODY>
+  <TR>
+    <TD><B>NOTA:</B> al pulsar el botón Enviar, se transmite al servlet el par 
+      name/value del elemento seleccionado. 
+      <P>En este caso, 
+http://..........?actividad=Parapente</P></TD></TR></TBODY></TABLE>
+<P>Si no se especifica el value de ninguna opción, se enviaría como value el 
+texto asociado a la opción seleccionada.</P>
+<P><IMG height=301 alt="" src="Formularios_archivos/img010019.gif" width=523 
+border=0></P>
+<P><A 
+href="http://larioja.adrformacion.com/general/prt/c/javaser/1/ListaDesplegableBis.html" 
+target=_blank>Ver formulario</A></P>
+<P>En este caso, http://..........?actividad=PARAPENTE</P><A 
+href="http://larioja.adrformacion.com/general/prt/c/javaser/1/c02.htm">
+<P style="TEXT-ALIGN: center" align=center>
+<DIV class=siguiente>
+<P></P></DIV>
+<P>
+<TABLE align=right>
+  <TBODY>
+  <TR>
+    <TD align=right><A 
+      href="javascript:window.location.replace(location.pathname+location.search+'#indice');"><IMG 
+      height=20 alt="Volver al índice superior" 
+      src="Formularios_archivos/marca2.gif" width=157 
+border=0></A></TD></TR></TBODY></TABLE></P></A></BODY></HTML>

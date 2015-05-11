@@ -1,0 +1,61 @@
+@import url( /general/prt/c/comun.css );
+A:link {
+	COLOR: #cc3300
+}
+A:visited {
+	COLOR: #cc3300
+}
+A:hover {
+	COLOR: #6699ff
+}
+A:active {
+	COLOR: #ff9900
+}
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+H1 {
+	FONT-SIZE: 18pt; COLOR: #365770; FONT-FAMILY: Arial, Verdana, Helvetica; LETTER-SPACING: -1pt; TEXT-ALIGN: center
+}
+H2 {
+	MARGIN-TOP: 25px; FONT-SIZE: 14pt; MARGIN-BOTTOM: 20px; COLOR: #365770; FONT-FAMILY: Arial, Verdana, Helvetica; TEXT-ALIGN: left
+}
+H3 {
+	FONT-SIZE: 12pt; MARGIN-LEFT: 10px; COLOR: #365770; FONT-FAMILY: Arial, Verdana, Helvetica
+}
+H4 {
+	FONT-SIZE: 10pt; COLOR: #365770; FONT-FAMILY: Arial, Verdana, Helvetica
+}
+H5 {
+	COLOR: #365770; FONT-FAMILY: Arial, Verdana, Helvetica
+}
+H6 {
+	COLOR: #365770; FONT-FAMILY: Arial, Verdana, Helvetica
+}
+P {
+	MARGIN-LEFT: 10px; TEXT-ALIGN: justify
+}
+HR {
+	COLOR: #3366cc
+}
+UL {
+	FONT-SIZE: 11pt; FONT-FAMILY: Arial, Verdana, Helvetica
+}
+OL {
+	FONT-SIZE: 11pt; FONT-FAMILY: Arial, Verdana, Helvetica
+}
+DT {
+	FONT-SIZE: 10pt; FONT-FAMILY: Arial, Verdana, Helvetica
+}
+DL {
+	FONT-SIZE: 10pt; FONT-FAMILY: Arial, Verdana, Helvetica
+}
+ADDRESS {
+	FONT-SIZE: 8pt; FONT-FAMILY: Arial, Verdana, Helvetica
+}
+TH {
+	FONT-SIZE: 12pt; COLOR: #365770; FONT-FAMILY: Arial, Verdana, Helvetica; BACKGROUND-COLOR: #bed1dc
+}
+TD {
+	FONT-SIZE: 10pt; FONT-FAMILY: Arial, Verdana, Helvetica
+}
